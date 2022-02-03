@@ -1,0 +1,150 @@
+@font-face {
+  font-family: Mux-heavy;
+  src: url("/font/Mux-heavy.woff");
+}
+@font-face {
+  font-family: Mux-regular;
+  src: url("/font/Mux-regular.woff");
+}
+@font-face {
+  font-family: Mux-thin;
+  src: url("/font/Mux-thin.woff");
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 20px;
+}
+
+body {
+  background-color: black;
+}
+
+header {
+  position: absolute;
+  top: 2rem;
+  z-index: 1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+header img {
+  width: 10%;
+}
+@media only screen and (max-width: 1140px) {
+  header img {
+    width: 6rem;
+  }
+}
+@media only screen and (max-width: 400px) {
+  header img {
+    margin-top: 10rem;
+  }
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+footer .footer__content {
+  width: 35%;
+  display: flex;
+  justify-content: space-between;
+}
+@media only screen and (max-width: 1140px) {
+  footer .footer__content {
+    flex-direction: column;
+    align-items: center;
+  }
+  footer .footer__content img {
+    order: 1;
+  }
+}
+@media only screen and (max-width: 1140px) and (max-width: 400px) {
+  footer .footer__content img {
+    display: none;
+  }
+}
+@media only screen and (max-width: 1140px) {
+  footer .footer__content .social {
+    order: 2;
+  }
+}
+@media only screen and (max-width: 1140px) {
+  footer .footer__content > * {
+    margin-bottom: 1rem;
+  }
+}
+footer .footer__content .social {
+  margin-top: 0.5rem;
+  display: flex;
+  font-family: Mux-thin;
+  font-size: 0.8rem;
+}
+footer .footer__content .social p {
+  margin-left: 0.5rem;
+  transition: transform 0.4s;
+}
+footer .footer__content .social p:hover {
+  transform: scale(1.1);
+}
+footer .footer__content .social a {
+  text-decoration: none;
+  color: white;
+}
+footer img {
+  width: 4rem;
+}
+
+.background {
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+.background .container {
+  z-index: 2;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.background .container-title {
+  width: 100%;
+  color: white;
+  font-family: Mux-thin;
+  display: flex;
+  justify-content: space-around;
+  font-size: 2rem;
+  position: relative;
+}
+.background .container-title p {
+  letter-spacing: 1.5rem;
+}
+@media only screen and (max-width: 670px) {
+  .background .container-title {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .background .container-title {
+    margin-top: 5rem;
+  }
+}
+.background video {
+  width: 100%;
+}/*# sourceMappingURL=style.css.map */

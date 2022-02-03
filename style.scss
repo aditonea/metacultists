@@ -1,0 +1,125 @@
+@import "./style/basic";
+@import "./style/responsive";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 20px;
+}
+
+body {
+  background-color: black;
+}
+
+header {
+    position: absolute;
+    top: 2rem;
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    img {
+        width: 10%;
+        @include landscape {
+          width: 6rem;
+        }
+        @include phone {
+          margin-top: 10rem;
+        }
+    }
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(black, .8);
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    .footer__content {
+        width: 35%;
+        display: flex;
+        justify-content: space-between;
+        @include landscape {
+          flex-direction: column;
+          align-items: center;
+          img {
+            order: 1;
+            @include phone {
+              display: none;
+            }
+          }
+          .social {
+            order: 2;
+          }
+          & > * {
+            margin-bottom: 1rem;
+          }
+        }
+        .social {
+            margin-top: .5rem;
+            display: flex;
+            font-family: Mux-thin;
+            font-size: .8rem;
+            p {
+                margin-left: .5rem;
+                transition: transform .4s;
+                &:hover {
+                  transform: scale(1.1);
+                }
+            }
+            a {
+              text-decoration: none;
+              color: white;
+            }
+        }
+    }
+    img {
+        width: 4rem;
+    }
+}
+
+.background {
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    .container{
+        z-index: 2;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        &-title {
+            width: 100%;
+            color: white;
+            font-family: Mux-thin;
+            display: flex;
+            justify-content: space-around;
+            font-size: 2rem;
+            position: relative;
+            p {
+                letter-spacing: 1.5rem;
+            }
+            @include tablet {
+              flex-direction: column;
+              align-items: center;
+            }
+            @include phone {
+              margin-top: 5rem;
+            }
+        }
+    }
+    video {
+        width: 100%;
+    }
+}
