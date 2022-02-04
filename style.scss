@@ -29,7 +29,7 @@ header {
         }
         @include phone {
           opacity: 1;
-          margin-top: 10rem;
+          // margin-top: 10rem;
         }
     }
 }
@@ -118,10 +118,15 @@ footer {
             }
             @include phone {
               margin-top: 5rem;
+              text-shadow: 5px 5px 5px rgba(black, .5);
             }
         }
     }
     video {
         width: 100%;
+        @include phone {
+          object-fit: cover;
+          height: 100%;
+        }
     }
 }

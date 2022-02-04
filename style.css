@@ -43,7 +43,6 @@ header img {
 @media only screen and (max-width: 400px) {
   header img {
     opacity: 1;
-    margin-top: 10rem;
   }
 }
 
@@ -145,8 +144,16 @@ footer img {
 @media only screen and (max-width: 400px) {
   .background .container-title {
     margin-top: 5rem;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
   }
 }
 .background video {
   width: 100%;
+}
+@media only screen and (max-width: 400px) {
+  .background video {
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 100%;
+  }
 }/*# sourceMappingURL=style.css.map */
