@@ -23,11 +23,12 @@ header {
     display: flex;
     justify-content: center;
     img {
-        width: 10%;
+        opacity: 0;
         @include landscape {
           width: 6rem;
         }
         @include phone {
+          opacity: 1;
           margin-top: 10rem;
         }
     }

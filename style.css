@@ -33,7 +33,7 @@ header {
   justify-content: center;
 }
 header img {
-  width: 10%;
+  opacity: 0;
 }
 @media only screen and (max-width: 1140px) {
   header img {
@@ -42,6 +42,7 @@ header img {
 }
 @media only screen and (max-width: 400px) {
   header img {
+    opacity: 1;
     margin-top: 10rem;
   }
 }
