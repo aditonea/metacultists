@@ -1,8 +1,17 @@
 const video = document.querySelector("#video");
+const title = document.querySelector(".container-title")
 
-video.play();
+// setTimeout(() => {
+//     video.src = "./loop.webm"
+//     video.setAttribute("loop", "true");
+// }, 6000)
 
-setTimeout(() => {
+video.addEventListener("ended", () => {
     video.src = "./loop.webm"
     video.setAttribute("loop", "true");
-}, 6000)
+})
+
+title.style.display = "none";
+setTimeout(() => {
+    title.style.display = "flex";
+}, 4000)
